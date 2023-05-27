@@ -11,3 +11,5 @@ npm run start
 
 To import user data
 npm run import
+
+Add postman collection json to import
