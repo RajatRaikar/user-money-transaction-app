@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "3763461b-660e-44a2-9845-d81c83d9c181",
+		"name": "user-money-transaction-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24411118"
+	},
+	"item": [
+		{
+			"name": "fetch/transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/fetchTransaction?transaction_id=68de8335-0808-48fa-9668-0a230489ace1-1685201481169",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fetchTransaction"
+					],
+					"query": [
+						{
+							"key": "transaction_id",
+							"value": "68de8335-0808-48fa-9668-0a230489ace1-1685201481169"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch/allTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/fetch/allTransaction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fetch",
+						"allTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/createTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "sender_id",
+							"value": "f1729ae4-67b9-46f8-bd15-5802bc29ae96",
+							"description": "f1729ae4-67b9-46f8-bd15-5802bc29ae96",
+							"type": "text"
+						},
+						{
+							"key": "receiver_id",
+							"value": "d3b94c7c-39ae-447c-a722-b4736898cb48",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "2500",
+							"type": "text"
+						},
+						{
+							"key": "details",
+							"value": "hdfc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/createTransaction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"createTransaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reverseTransaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transaction_id",
+							"value": "944542b3-5ed2-4aea-9475-d3574a10b9f4-1685201580409",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/reverseTransaction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"reverseTransaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
